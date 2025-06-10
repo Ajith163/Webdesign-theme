@@ -1,0 +1,39 @@
+/* Variables for themes */
+:root {
+  --bg-dark: #0a0a23;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --bg-light: #ffffff;
+  --text-light-primary: #111827;
+  --text-light-secondary: #4b5563;
+}
+
+/* Base dark theme */
+body.dark {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Light theme override */
+body.light {
+  background-color: var(--bg-light);
+  color: var(--text-light-primary);
+}
+
+body.light .text-secondary {
+  color: var(--text-light-secondary) !important;
+}
+
+body.light .feature-card {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-light-primary);
+}
+
+body.dark .feature-card {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Optional: transition */
+body {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
